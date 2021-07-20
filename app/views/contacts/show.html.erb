@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+<style type="text/css">
+    .jumbotron {
+      padding: 4rem 2rem;
+      margin-bottom: 2rem;
+      background-color: var(--bs-light);
+      border-radius: .3rem;  
+    }
+</style>
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @contact.first_name %> <%= @contact.last_name %></h1>
+  <p class="lead"><%= @contact.email %><br/><%= @contact.phone %></p>
+  <br/><br/>
+  <!--<hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  -->
+  <%= link_to 'Edit', edit_contact_path(@contact), class:"btn btn-dark" %> 
+  <%= link_to 'Back', contacts_path, class:"btn btn-dark" %>
+</div>
+
