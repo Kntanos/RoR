@@ -28,7 +28,13 @@
   <div class="field form-group">
   <br/>
     <%= form.text_field :phone, class:"form-control", placeholder:"Telephone number" %>
+  </div>        
+
+    <div class="field form-group">
+  <br/>
+    <%= form.number_field :user_id, id: :contact_user_id, class:"form-control", value:current_user.id, type: :hidden %>
   </div>
+
   <br/>
   <div class="actions">
     <%= form.submit %>
